@@ -16,11 +16,11 @@ std::vector<mountpoint> list_mounts() {
 
 	char *buffer, *current;
 
-	current = buffer = (char *)malloc(102400);
-	memset(buffer, 0, 102400);
+	current = buffer = (char *)malloc(409600);
+	memset(buffer, 0, 409600);
 
 	int rc;
-	rc = mntctl(MCTL_QUERY, 102400, buffer);
+	rc = mntctl(MCTL_QUERY, 409600, buffer);
 
 	if(rc<0) {
 		perror("Error getting initial");
